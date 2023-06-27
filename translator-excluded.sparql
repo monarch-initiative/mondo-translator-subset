@@ -1,0 +1,12 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix MONDO: <http://purl.obolibrary.org/obo/MONDO_>
+
+SELECT ?term WHERE {
+  VALUES ?excluded_mondo_id {
+    MONDO:0000947
+		MONDO:0000595
+		MONDO:0001500
+  }
+  ?term rdfs:subClassOf* ?excluded_mondo_id .
+}
