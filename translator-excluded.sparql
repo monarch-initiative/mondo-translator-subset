@@ -7,6 +7,7 @@ SELECT ?term WHERE {
     MONDO:0000947
 		MONDO:0000595
 		MONDO:0001500
+	MONDO:0005583
   }
   ?term rdfs:subClassOf* ?excluded_mondo_id .
 }
